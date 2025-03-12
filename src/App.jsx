@@ -1,5 +1,6 @@
+import React from "react";
 import { useState } from "react";
-import { Container, Typography, Button, TextField, MenuItem, Card, CardContent, Grid } from "@mui/material";
+import { Container, Typography, Button, TextField, MenuItem, Card, CardContent, Grid, Box } from "@mui/material";
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 const initialTasks = [
@@ -36,7 +37,7 @@ export default function App() {
     <Container>
       <Typography variant="h4" gutterBottom>Tareas</Typography>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={12} sm={8} sx={{ maxHeight: "80vh", overflowY: "auto" }}>
           <TextField
             fullWidth
             label="Nueva Tarea"
@@ -62,15 +63,16 @@ export default function App() {
           ))}
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Typography variant="h6">Estado de tareas</Typography>
-          <PieChart width={250} height={250}>
-            <Pie data={chartData} cx="50%" cy="50%" outerRadius={80} fill="#8884d8" dataKey="value">
-              {chartData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-              ))}
-            </Pie>
-            <Tooltip />
-          </PieChart>
+          <Box display="flex" justifyContent="center" alignItems="center" height="100vh" flexDirection="column">
+            <PieChart width={250} height={250}>
+              <Pie data={chartData} cx="50%" cy="50%" outerRadius={80} fill="#8884d8" dataKey="value">
+                {chartData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Pie>
+              <Tooltip />
+            </PieChart>
+          </Box>
         </Grid>
       </Grid>
     </Container>
