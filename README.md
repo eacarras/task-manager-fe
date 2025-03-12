@@ -16,6 +16,13 @@ npm install
 npm run dev
 ```
 
+### The cool way
+Let's use Docker for this, just run
+```
+docker build -t task-app .
+docker run -p 5173:5173 task-app
+```
+
 ## How to run the tests
 
 Remember first run `npm install`
