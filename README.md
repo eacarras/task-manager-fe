@@ -39,3 +39,11 @@ Then just run
 ```
 npm run test
 ```
+
+## Missing steps
+- [ ] Use property the structure proposed instead of just one file in everything
+- [ ] Add e2e test
+- [ ] Complete deployment process for this we will add a listener in Amplify to hear changes in our master branch
+- [ ] Add CI/CD with build and test to better track of any new changes in the UI
+- [ ] Improve UI/UX
+ 
