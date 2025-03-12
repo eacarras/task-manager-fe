@@ -3,6 +3,11 @@
 If you want to see the backend of this you can see
 [Backend Task Managment](https://github.com/eacarras/task_managment_backend)
 
+### Infraestructure proposed
+This includes the BE mentioned before
+<img width="736" alt="Screenshot 2025-03-12 at 6 55 31 AM" src="https://github.com/user-attachments/assets/428e9846-4a34-49b9-a1e1-658e51152ea3" />
+
+### Other important information about the project
 For generate this we use Vite + React:
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
